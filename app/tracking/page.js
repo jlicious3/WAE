@@ -20,8 +20,8 @@ export default function QueryPage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <div className="flex flex-col min-h-screen bg-white">
-        <header className="flex justify-center shadow-md">
+      <div className="bg-white">
+        <header className="flex justify-center shadow-md w-full">
           <Link href="http://localhost:3000/">
           <Image src="/image/wae-logo.png" alt="W.A.E. Tracker Logo" width={150} height={100} />
           </Link>
