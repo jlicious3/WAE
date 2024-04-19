@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Head from "next/head";
-import Link from 'next/link';
+import Link from "next/link";
 import { DiWindows } from "react-icons/di";
 
 export default function Home() {
   return (
     <>
-      {/* Add the Head component here */}
+
       <Head>
         <title>W.A.E. Tracker</title>
       </Head>
@@ -17,15 +17,18 @@ export default function Home() {
       </div>
 
       <div className="font-mono text-black hover:bg-blue-500 font-bold border-4 border-black py-2 px-4 rounded-full inline-block">
-      <Link href="/tracking"> Start Tracking </Link>
+      <Link href="/Query"> Start Tracking </Link>
       </div>
 
       <Image className="pt-5 pl-5 pb-10" src="/image/icons-footer.jpg" alt="icons-footer" width="500" height="200" />
       
-      <div className="text-black flex-grow flex-grow items-end">  
-      <footer className="flex justify-center items-end space-x-8 pt-20 pb-5">
+      <div className="text-black flex-grow flex-grow items-end pb-5">  
+      <footer className="flex justify-center items-end space-x-8 pt-20">
       <DiWindows size={30} />
-      <Image src="/image/sait-logo.jpg" alt="SAIT Logo" width="100" height="100" />
+
+      <Link href="http://www.sait.ca">
+      <Image className="hover:underline" src="/image/sait-logo.jpg" alt="SAIT Logo" width="100" height="100" />
+      </Link>
       </footer>
       </div>
       </main>
