@@ -80,7 +80,10 @@ return (
         <h2 className="text-lg font-medium mb-4">Year: {selectedYear || 'N/A'}</h2>
 
         <section className="mb-6">
-          <h3 className="text-lg font-medium mb-2">Climate Data:</h3>
+        <div className='flex pb-2'>
+          <Image src="/image/weathericon.jpg" alt="Climate Icon" width={60} height={60} />
+          <h3 className="text-lg font-medium mb-2 pt-5">Climate Data:</h3>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <p>Minimum Temperature: <span className="font-semibold">{filteredClimateData.temp_min__temp_min || 'N/A'}°C</span></p>
             <p>Maximum Temperature: <span className="font-semibold">{filteredClimateData.temp_max__temp_max || 'N/A'}°C</span></p>
@@ -89,12 +92,18 @@ return (
         </section>
 
         <section className="mb-6">
-          <h3 className="text-lg font-medium mb-2">Air Quality Data:</h3>
+          <div className='flex mb-4'>
+          <Image src="/image/airqualityicon.jpg" alt="Ozone Icon" width={40} height={40} />
+          <h3 className="text-lg font-medium mb-2 mt-1 pl-5">Air Quality Data:</h3>
+          </div>
           <p>Peak Ozone Concentration (Parts Per Billion): <span className="font-semibold">{filteredOzoneData[`${selectedYear} (parts per billion)`] || 'N/A'}</span></p>
         </section>
 
         <section className="mb-6">
-          <h3 className="text-lg font-medium mb-2">Energy Usage Data:</h3>
+        <div className='flex mb-4'>
+          <Image src="/image/energyicon.jpg" alt="Energy Usage Icon" width={40} height={40} />
+          <h3 className="text-lg font-medium mb-2 pl-5">Energy Usage Data:</h3>
+          </div>
           {filteredEnergyData.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {filteredEnergyData.map((data, index) => (
